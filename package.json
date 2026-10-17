@@ -1,0 +1,45 @@
+{
+  "name": "dsh-session-search",
+  "version": "0.1.0",
+  "description": "Find bar for the conversation body: a header button opens a search panel that scans user and assistant message text, lists matches, and scrolls to the hit with it highlighted.",
+  "type": "module",
+  "private": true,
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    },
+    "manifestVersion": 1
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhaoli/dsh-session-search.git"
+  },
+  "homepage": "https://github.com/minhaoli/dsh-session-search#readme",
+  "bugs": {
+    "url": "https://github.com/minhaoli/dsh-session-search/issues"
+  },
+  "author": "haomin li",
+  "files": [
+    "lib/**/*.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ]
+}

@@ -1,0 +1,6 @@
+# dsh-session-search bundle patch: inserts its plugin row into the web plugin roster.
+# A client-only package: the single row carries the browser half (the find bar),
+# while lib/index.js stays an empty host plugin so the bundle row composes.
+- insert:
+    - id: session-search
+      name: 'dsh-session-search'
